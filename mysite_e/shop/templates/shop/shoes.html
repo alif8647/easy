@@ -1,0 +1,35 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}Shoes{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+  <div class="col-sm-3">
+   <div class="list-group">
+    <a href="{% url 'shoes' %}" class="list-group-item list-group-item-action  " aria-current="true">All</a>
+    <a href="{% url 'shoesdata' 'low' %}" class="list-group-item list-group-item-action " aria-current="true">Low Price</a>
+    <a href="{% url 'shoesdata' 'high' %}" class="list-group-item list-group-item-action" aria-current="true">High Price</a>
+   </div>
+  </div>
+  <div class="col-sm-8 col-md-9 offset-sm-0">
+   <div class="row">
+    {% for mb in shoes %}
+       <div class="col-lg-4 col-md-4 col-sm-6 text-center mb-4 mr-0">
+       <a href="{% url 'product-detail' mb.id %}" class="btn">
+        <div class="item product_area">
+          <img src="{{ mb.product_image.url }}" alt="img" class="img">
+          <div class="fw-bold">{{mb.title}}</div>
+          <div class="fw-bold">Tk {{mb.discounted_price}}
+           <small class="fw-light text-decoration-line-through">{{mb.selling_price}}</small></div>
+        </div>
+       </a>
+      </div>
+     {% endfor %}
+   </div>
+
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
+
+

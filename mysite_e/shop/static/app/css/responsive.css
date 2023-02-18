@@ -1,0 +1,18 @@
+@media only screen and (max-width: 1200px) {
+   .product_area .img{
+        max-height:230px;
+        max-width:230px;
+    }
+}
+@media only screen and (max-width: 992px) {
+   .product_area .img{
+        max-height:180px;
+        max-width:170px;
+    }
+}
+@media only screen and (max-width: 575px) {
+   .product_area .img{
+        max-height:200px;
+        max-width:200px;
+    }
+}

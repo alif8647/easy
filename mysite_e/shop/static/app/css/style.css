@@ -1,0 +1,75 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;;
+}
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.end_bottom{
+    background-color: #292929;
+    margin-top: 30px;
+}
+.compaany {
+    padding-bottom: 10px;
+}
+.compaany h5{
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    color: #fff;
+    margin: unset;
+    text-align:center
+}
+.compaany ul{
+    margin-bottom:15px;
+    padding:0;
+    border-top: 1px solid #fff;
+}
+.company_aling ul li a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration:none;
+
+
+}
+.company_aling ul li:hover a{
+    color: rgb(182, 174, 174);
+    transition: all 0.4s;
+}
+
+.social_icone ul li {
+    margin-top:15px;
+    padding: 0px 5px;
+    display: inline-block;
+    transition: all 0.4s;
+}
+.social_icone ul li a{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+.social_icone ul li:hover a{
+    background-color: #00ade4;
+    transition: all 0.4s;
+}

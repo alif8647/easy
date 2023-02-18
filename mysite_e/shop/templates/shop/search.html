@@ -1,0 +1,31 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}Search{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+ <div class="row">
+   <div class="col-sm-2 col-md2">
+
+   </div>
+  <div class="col-sm-8 col-md-8 offset-2">
+   <div class="row">
+    {% for mb in product %}
+       <div class="col-lg-4 col-md-4 col-sm-6 text-center mb-4 mr-0">
+       <a href="{% url 'product-detail' mb.id %}" class="btn">
+        <div class="item product_area">
+          <img src="{{ mb.product_image.url }}" alt="img" class="img">
+          <div class="fw-bold">{{mb.title}}</div>
+          <div class="fw-bold">Tk {{mb.discounted_price}}
+           <small class="fw-light text-decoration-line-through">{{mb.selling_price}}</small></div>
+        </div>
+       </a>
+      </div>
+     {% endfor %}
+   </div>
+
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
+
+
